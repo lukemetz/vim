@@ -18,7 +18,6 @@ download_file(pathogen_file)
 lfs.chdir("../")
 
 bundles_git = {
-  "https://github.com/Lokaltog/vim-powerline.git",
   "https://github.com/tpope/vim-surround.git",
   "https://github.com/tomtom/tcomment_vim.git",
   "https://github.com/tomasr/molokai.git",
