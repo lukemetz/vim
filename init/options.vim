@@ -5,6 +5,7 @@ set guioptions-=T " Remove GUI toolbar
 set guioptions-=e " Use text tab bar, not GUI
 set guioptions-=rL " Remove scrollbars
 set visualbell " Suppress audio/visual error bell
+set noerrorbells visualbell t_vb= " Kill the bells somemore
 set notimeout " No command timeout
 set showcmd " Show typed command prefixes while waiting for operator
 set mouse=a " Use mouse support in XTerm/iTerm.
