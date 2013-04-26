@@ -21,6 +21,7 @@ bundles_git = {
   "https://github.com/tpope/vim-surround.git",
   "https://github.com/tomtom/tcomment_vim.git",
   "https://github.com/tomasr/molokai.git",
+  "https://github.com/tpope/vim-fugitive.git"
 }
 
 lfs.chdir("bundle")
