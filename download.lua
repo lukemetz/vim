@@ -21,12 +21,26 @@ bundles_git = {
   "https://github.com/tpope/vim-surround.git",
   "https://github.com/tomtom/tcomment_vim.git",
   "https://github.com/tomasr/molokai.git",
-  "https://github.com/tpope/vim-fugitive.git"
+  "https://github.com/tpope/vim-fugitive.git",
 }
 
 lfs.chdir("bundle")
 for _,name in ipairs(bundles_git) do
   git_clone(name) 
 end
+lfs.chdir("../")
+
+syntax_down = {
+  "https://raw.github.com/vim-scripts/cg.vim/master/syntax/cg.vim"
+}
+
+
+lfs.chdir("syntax")
+for _,name in ipairs(syntax_down) do
+  download_file(name) 
+end
+
+os.execute("dos2unix cg.vim")
+
 lfs.chdir("../")
 
