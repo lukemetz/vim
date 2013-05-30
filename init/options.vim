@@ -53,7 +53,8 @@ set laststatus=2 " Always show statusline
 
 set incsearch " Incremental search
 set history=1024 " History size
-set smartcase " Smart case-sensitivity when searching (overrides ignorecase)
+set smartcase " Smart case-sensitivity when searching
+set ignorecase " Needed for smartcase to work
 
 set autoread " No prompt for file changes outside Vim
 
