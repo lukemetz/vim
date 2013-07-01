@@ -23,6 +23,7 @@ bundles_git = {
   "https://github.com/tomasr/molokai.git",
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/Valloric/YouCompleteMe.git",
+  "https://github.com/scrooloose/syntastic.git"
 }
 
 lfs.chdir("bundle")
