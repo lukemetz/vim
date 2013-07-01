@@ -22,12 +22,18 @@ bundles_git = {
   "https://github.com/tomtom/tcomment_vim.git",
   "https://github.com/tomasr/molokai.git",
   "https://github.com/tpope/vim-fugitive.git",
+  "https://github.com/Valloric/YouCompleteMe.git",
 }
 
 lfs.chdir("bundle")
 for _,name in ipairs(bundles_git) do
-  git_clone(name) 
+  git_clone(name)
 end
+
+lfs.chdir("YouCompleteMe")
+os.execute("export CXX=g++; ./install.sh --clang-completer")
+lfs.chdir("../")
+
 lfs.chdir("../")
 
 syntax_down = {
