@@ -1,6 +1,6 @@
 " Modified from https://github.com/pivotalforks/vim-config/blob/master/init/options.vim
 
-set guifont=inconsolata\ 12
+set guifont=dejavu\ sans\ mono\ 12
 set guioptions-=T " Remove GUI toolbar
 set guioptions-=e " Use text tab bar, not GUI
 set guioptions-=rL " Remove scrollbars

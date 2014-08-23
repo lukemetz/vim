@@ -21,7 +21,6 @@ lfs.chdir("../")
 
 
 syntax_down = {
-  "https://raw.github.com/vim-scripts/cg.vim/master/syntax/cg.vim"
 }
 
 lfs.chdir("syntax")
@@ -29,7 +28,6 @@ for _,name in ipairs(syntax_down) do
   download_file(name)
 end
 
-os.execute("dos2unix cg.vim")
 lfs.chdir("../")
 
 
@@ -40,7 +38,14 @@ bundles_git = {
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/Valloric/YouCompleteMe.git",
   "https://github.com/scrooloose/syntastic.git",
-  "https://github.com/bling/vim-airline"
+  "https://github.com/bling/vim-airline",
+  "https://github.com/mileszs/ack.vim.git",
+  "https://github.com/sjl/gundo.vim.git",
+  "https://github.com/godlygeek/tabular.git",
+  "https://github.com/dag/vim2hs.git",
+  "https://github.com/scrooloose/nerdtree.git",
+  "https://github.com/scrooloose/nerdcommenter.git",
+  "https://github.com/kien/ctrlp.vim.git"
 }
 
 lfs.chdir("bundle")
@@ -52,7 +57,8 @@ os.execute("git add -A; git commit -m 'Built'")
 os.execute("git submodule update --init --recursive")
 
 lfs.chdir("YouCompleteMe")
-os.execute("export CXX=g++; ./install.sh --clang-completer")
+--The --system-libclang option is highly not recommended, but works...
+os.execute("export CXX=g++; ./install.sh --clang-completer --system-libclang")
 lfs.chdir("../")
 
 lfs.chdir("../")
