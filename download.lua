@@ -10,6 +10,8 @@ local function download_file(name)
   os.execute("wget " .. name)
 end
 
+os.execute("git branch -D build; git checkout -b build")
+
 --install pathogen
 pathogen_file = "https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
 
@@ -52,3 +54,5 @@ os.execute("dos2unix cg.vim")
 
 lfs.chdir("../")
 
+os.execute("git add -A; git commit -m 'Built'")
+print("\nTo rebuild, git checkout master and re-run the install script")
