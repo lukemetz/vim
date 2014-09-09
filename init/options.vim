@@ -4,6 +4,7 @@ set guifont=inconsolata\ 12
 set guioptions-=T " Remove GUI toolbar
 set guioptions-=e " Use text tab bar, not GUI
 set guioptions-=rL " Remove scrollbars
+set guiheadroom=0 " Fill odd empty space at bottom of window
 set visualbell " Suppress audio/visual error bell
 set noerrorbells visualbell t_vb= " Kill the bells somemore
 set notimeout " No command timeout
